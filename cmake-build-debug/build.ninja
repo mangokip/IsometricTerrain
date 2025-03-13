@@ -49,35 +49,40 @@ cmake_ninja_workdir = /home/bryce-klein/GameDev/IsometricTileSim/cmake-build-deb
 
 build cmake_object_order_depends_target_IsometricTileSim: phony || .
 
-build CMakeFiles/IsometricTileSim.dir/main.cpp.o: CXX_COMPILER__IsometricTileSim_unscanned_Debug /home/bryce-klein/GameDev/IsometricTileSim/main.cpp || cmake_object_order_depends_target_IsometricTileSim
-  DEP_FILE = CMakeFiles/IsometricTileSim.dir/main.cpp.o.d
+build CMakeFiles/IsometricTileSim.dir/src/Block.cpp.o: CXX_COMPILER__IsometricTileSim_unscanned_Debug /home/bryce-klein/GameDev/IsometricTileSim/src/Block.cpp || cmake_object_order_depends_target_IsometricTileSim
+  DEP_FILE = CMakeFiles/IsometricTileSim.dir/src/Block.cpp.o.d
   FLAGS = -g -std=gnu++20 -fdiagnostics-color=always
+  INCLUDES = -I/home/bryce-klein/GameDev/IsometricTileSim/include
   OBJECT_DIR = CMakeFiles/IsometricTileSim.dir
-  OBJECT_FILE_DIR = CMakeFiles/IsometricTileSim.dir
+  OBJECT_FILE_DIR = CMakeFiles/IsometricTileSim.dir/src
 
-build CMakeFiles/IsometricTileSim.dir/Tile.cpp.o: CXX_COMPILER__IsometricTileSim_unscanned_Debug /home/bryce-klein/GameDev/IsometricTileSim/Tile.cpp || cmake_object_order_depends_target_IsometricTileSim
-  DEP_FILE = CMakeFiles/IsometricTileSim.dir/Tile.cpp.o.d
+build CMakeFiles/IsometricTileSim.dir/src/BlockMap.cpp.o: CXX_COMPILER__IsometricTileSim_unscanned_Debug /home/bryce-klein/GameDev/IsometricTileSim/src/BlockMap.cpp || cmake_object_order_depends_target_IsometricTileSim
+  DEP_FILE = CMakeFiles/IsometricTileSim.dir/src/BlockMap.cpp.o.d
   FLAGS = -g -std=gnu++20 -fdiagnostics-color=always
+  INCLUDES = -I/home/bryce-klein/GameDev/IsometricTileSim/include
   OBJECT_DIR = CMakeFiles/IsometricTileSim.dir
-  OBJECT_FILE_DIR = CMakeFiles/IsometricTileSim.dir
+  OBJECT_FILE_DIR = CMakeFiles/IsometricTileSim.dir/src
 
-build CMakeFiles/IsometricTileSim.dir/TileMap.cpp.o: CXX_COMPILER__IsometricTileSim_unscanned_Debug /home/bryce-klein/GameDev/IsometricTileSim/TileMap.cpp || cmake_object_order_depends_target_IsometricTileSim
-  DEP_FILE = CMakeFiles/IsometricTileSim.dir/TileMap.cpp.o.d
+build CMakeFiles/IsometricTileSim.dir/src/Tile.cpp.o: CXX_COMPILER__IsometricTileSim_unscanned_Debug /home/bryce-klein/GameDev/IsometricTileSim/src/Tile.cpp || cmake_object_order_depends_target_IsometricTileSim
+  DEP_FILE = CMakeFiles/IsometricTileSim.dir/src/Tile.cpp.o.d
   FLAGS = -g -std=gnu++20 -fdiagnostics-color=always
+  INCLUDES = -I/home/bryce-klein/GameDev/IsometricTileSim/include
   OBJECT_DIR = CMakeFiles/IsometricTileSim.dir
-  OBJECT_FILE_DIR = CMakeFiles/IsometricTileSim.dir
+  OBJECT_FILE_DIR = CMakeFiles/IsometricTileSim.dir/src
 
-build CMakeFiles/IsometricTileSim.dir/Block.cpp.o: CXX_COMPILER__IsometricTileSim_unscanned_Debug /home/bryce-klein/GameDev/IsometricTileSim/Block.cpp || cmake_object_order_depends_target_IsometricTileSim
-  DEP_FILE = CMakeFiles/IsometricTileSim.dir/Block.cpp.o.d
+build CMakeFiles/IsometricTileSim.dir/src/TileMap.cpp.o: CXX_COMPILER__IsometricTileSim_unscanned_Debug /home/bryce-klein/GameDev/IsometricTileSim/src/TileMap.cpp || cmake_object_order_depends_target_IsometricTileSim
+  DEP_FILE = CMakeFiles/IsometricTileSim.dir/src/TileMap.cpp.o.d
   FLAGS = -g -std=gnu++20 -fdiagnostics-color=always
+  INCLUDES = -I/home/bryce-klein/GameDev/IsometricTileSim/include
   OBJECT_DIR = CMakeFiles/IsometricTileSim.dir
-  OBJECT_FILE_DIR = CMakeFiles/IsometricTileSim.dir
+  OBJECT_FILE_DIR = CMakeFiles/IsometricTileSim.dir/src
 
-build CMakeFiles/IsometricTileSim.dir/BlockMap.cpp.o: CXX_COMPILER__IsometricTileSim_unscanned_Debug /home/bryce-klein/GameDev/IsometricTileSim/BlockMap.cpp || cmake_object_order_depends_target_IsometricTileSim
-  DEP_FILE = CMakeFiles/IsometricTileSim.dir/BlockMap.cpp.o.d
+build CMakeFiles/IsometricTileSim.dir/src/main.cpp.o: CXX_COMPILER__IsometricTileSim_unscanned_Debug /home/bryce-klein/GameDev/IsometricTileSim/src/main.cpp || cmake_object_order_depends_target_IsometricTileSim
+  DEP_FILE = CMakeFiles/IsometricTileSim.dir/src/main.cpp.o.d
   FLAGS = -g -std=gnu++20 -fdiagnostics-color=always
+  INCLUDES = -I/home/bryce-klein/GameDev/IsometricTileSim/include
   OBJECT_DIR = CMakeFiles/IsometricTileSim.dir
-  OBJECT_FILE_DIR = CMakeFiles/IsometricTileSim.dir
+  OBJECT_FILE_DIR = CMakeFiles/IsometricTileSim.dir/src
 
 
 # =============================================================================
@@ -87,7 +92,7 @@ build CMakeFiles/IsometricTileSim.dir/BlockMap.cpp.o: CXX_COMPILER__IsometricTil
 #############################################
 # Link the executable IsometricTileSim
 
-build IsometricTileSim: CXX_EXECUTABLE_LINKER__IsometricTileSim_Debug CMakeFiles/IsometricTileSim.dir/main.cpp.o CMakeFiles/IsometricTileSim.dir/Tile.cpp.o CMakeFiles/IsometricTileSim.dir/TileMap.cpp.o CMakeFiles/IsometricTileSim.dir/Block.cpp.o CMakeFiles/IsometricTileSim.dir/BlockMap.cpp.o | /usr/lib/x86_64-linux-gnu/libsfml-graphics.so.2.6.1 /usr/lib/x86_64-linux-gnu/libsfml-window.so.2.6.1 /usr/lib/x86_64-linux-gnu/libsfml-system.so.2.6.1
+build IsometricTileSim: CXX_EXECUTABLE_LINKER__IsometricTileSim_Debug CMakeFiles/IsometricTileSim.dir/src/Block.cpp.o CMakeFiles/IsometricTileSim.dir/src/BlockMap.cpp.o CMakeFiles/IsometricTileSim.dir/src/Tile.cpp.o CMakeFiles/IsometricTileSim.dir/src/TileMap.cpp.o CMakeFiles/IsometricTileSim.dir/src/main.cpp.o | /usr/lib/x86_64-linux-gnu/libsfml-graphics.so.2.6.1 /usr/lib/x86_64-linux-gnu/libsfml-window.so.2.6.1 /usr/lib/x86_64-linux-gnu/libsfml-system.so.2.6.1
   FLAGS = -g
   LINK_LIBRARIES = /usr/lib/x86_64-linux-gnu/libsfml-graphics.so.2.6.1  /usr/lib/x86_64-linux-gnu/libsfml-window.so.2.6.1  /usr/lib/x86_64-linux-gnu/libsfml-system.so.2.6.1
   OBJECT_DIR = CMakeFiles/IsometricTileSim.dir

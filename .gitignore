@@ -1,0 +1,37 @@
+# CLion-specific files
+.idea/
+*.iml
+
+# CMake build directories (adjust if you use a different build folder)
+cmake-build-*/
+build/
+
+# CMake generated files
+CMakeCache.txt
+CMakeFiles/
+CMakeScripts/
+CTestTestfile.cmake
+Makefile
+compile_commands.json
+
+# Compiled object files, static libraries, shared libraries, executables
+*.o
+*.obj
+*.lo
+*.la
+*.a
+*.lib
+*.so
+*.dylib
+*.dll
+*.exe
+*.out
+
+# Backup files and temporary files
+*~
+*.swp
+*.swo
+*.tmp
+
+# Logs
+*.log

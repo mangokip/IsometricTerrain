@@ -27,3 +27,6 @@ Build:
   make
   ./IsometricTileSim  
 ```
+
+## Progress
+![Alt text](assets/images/terraindemo.gif)

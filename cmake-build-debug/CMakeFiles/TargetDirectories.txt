@@ -1,0 +1,3 @@
+/home/bryce-klein/GameDev/IsometricTileSim/cmake-build-debug/CMakeFiles/IsometricTileSim.dir
+/home/bryce-klein/GameDev/IsometricTileSim/cmake-build-debug/CMakeFiles/edit_cache.dir
+/home/bryce-klein/GameDev/IsometricTileSim/cmake-build-debug/CMakeFiles/rebuild_cache.dir

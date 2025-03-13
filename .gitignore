@@ -2,7 +2,7 @@
 .idea/
 *.iml
 
-# CMake build directories (adjust if you use a different build folder)
+# CMake build directories (e.g., cmake-build-debug, cmake-build-release)
 cmake-build-*/
 build/
 
@@ -14,7 +14,7 @@ CTestTestfile.cmake
 Makefile
 compile_commands.json
 
-# Compiled object files, static libraries, shared libraries, executables
+# Compiled object files, libraries, executables
 *.o
 *.obj
 *.lo
@@ -27,7 +27,7 @@ compile_commands.json
 *.exe
 *.out
 
-# Backup files and temporary files
+# Backup and temporary files
 *~
 *.swp
 *.swo
@@ -35,3 +35,6 @@ compile_commands.json
 
 # Logs
 *.log
+
+# Clang format backup files (if any)
+*.orig

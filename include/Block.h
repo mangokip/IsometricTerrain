@@ -6,10 +6,10 @@
 #define BLOCK_H
 
 #include <SFML/Graphics.hpp>
-
+#include <random>
 class Block {
  public:
-     Block(const sf::Vector2f& center, int row, const sf::Vector2f& size, float height);
+     Block(const sf::Vector2f& center, int row, const sf::Vector2f& size, float height, int blockType);
 
      void setTopColor(const sf::Color& color);
      void setLeftColor(const sf::Color& color);
@@ -27,8 +27,9 @@ class Block {
      sf::Vector2f center;
      sf::Vector2f size;
      int gridRow;
+     int blockType;
      float height;
-
+     sf::Color generateRandomColor(int blockType);
      void updateShapes();
 
 };

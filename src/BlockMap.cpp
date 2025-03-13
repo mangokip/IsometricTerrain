@@ -3,17 +3,22 @@
 //
 
 #include "BlockMap.h"
+#include "Block.h"
+#include <random>
 #include <cmath>
 
 BlockMap::BlockMap(int width, int height, const sf::Vector2f& origin, const sf::Vector2f& blockSize, float blockHeight) : gridWidth(width), gridHeight(height) {
+    std::random_device rd;
+    std::mt19937 rng(rd());
+    std::uniform_int_distribution<int> blockTypeDist(0, 3);
+
     for(int x = 0; x < gridWidth; ++x) {
         for(int y = 0; y < gridHeight; ++y) {
             float isotopeX = (x - y) * (blockSize.x / 2.f);
             float isotypeY = (x + y) * (blockSize.y / 2.f);
             sf::Vector2f center = origin + sf::Vector2f(isotopeX, isotypeY);
-            sf::Color topColor = ((x+y) % 2 == 0) ? sf::Color::Red : sf::Color::Green;
-            Block block(center, y, blockSize, blockHeight);
-            block.setTopColor(topColor);
+            int blockType = blockTypeDist(rng);
+            Block block(center, y, blockSize, blockHeight, blockType);
             blocks.push_back(block);
 
         }

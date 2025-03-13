@@ -3,17 +3,25 @@
 //
 
 #include "Block.h"
+#include <random>
+#include <algorithm>
 
-Block::Block(const sf::Vector2f& center, int row, const sf::Vector2f& size, float height) : center(center), originalPosition(center),gridRow(row), size(size), height(height) {
+Block::Block(const sf::Vector2f& center, int row, const sf::Vector2f& size, float height, int blockType) : center(center), originalPosition(center),gridRow(row), size(size), height(height), blockType(blockType) {
     top.setPointCount(4);
     left.setPointCount(4);
     right.setPointCount(4);
 
-    updateShapes();
+    sf::Color randomTop = generateRandomColor(blockType);
+    top.setFillColor(randomTop);
 
-    top.setFillColor(sf::Color::White);
-    left.setFillColor(sf::Color(100, 100, 100));
-    right.setFillColor(sf::Color(150, 150, 150));
+    sf::Color darkSide(
+        std::max(0, randomTop.r - 20),
+        std::max(0, randomTop.g - 20),
+        std::max(0, randomTop.b - 20)
+    );
+    left.setFillColor(darkSide);
+    right.setFillColor(darkSide);
+    updateShapes();
 }
 
 void Block::updateShapes() {
@@ -36,6 +44,44 @@ void Block::updateShapes() {
     right.setPoint(1, topBottom);
     right.setPoint(2, { topBottom.x, topBottom.y + height });
     right.setPoint(3, { topRight.x,  topRight.y  + height });
+}
+
+sf::Color Block::generateRandomColor(int blockType) {
+    static std::mt19937 rng(std::random_device{}());
+    std::uniform_int_distribution<int> distR, distG, distB;
+
+    switch(blockType) {
+        case 0: // grass
+            distR = std::uniform_int_distribution<int>(30,  60);
+            distG = std::uniform_int_distribution<int>(150, 200);
+            distB = std::uniform_int_distribution<int>(30,  60);
+            break;
+        case 1: // water
+            distR = std::uniform_int_distribution<int>(0,   50);
+            distG = std::uniform_int_distribution<int>(0,   100);
+            distB = std::uniform_int_distribution<int>(150, 255);
+            break;
+        case 2: // snow
+            distR = std::uniform_int_distribution<int>(220, 255);
+            distG = std::uniform_int_distribution<int>(220, 255);
+            distB = std::uniform_int_distribution<int>(220, 255);
+        break;
+        case 3: // sand/dirt
+            distR = std::uniform_int_distribution<int>(150, 200);
+            distG = std::uniform_int_distribution<int>(120, 170);
+            distB = std::uniform_int_distribution<int>(70,  110);
+        break;
+        default:
+            distR = std::uniform_int_distribution<int>(0, 255);
+            distG = std::uniform_int_distribution<int>(0, 255);
+            distB = std::uniform_int_distribution<int>(0, 255);
+            break;
+    }
+
+    int r = distR(rng);
+    int g = distG(rng);
+    int b = distB(rng);
+    return sf::Color(r, g, b);
 }
 
 void Block::setTopColor(const sf::Color& color) {

@@ -29,4 +29,4 @@ Build:
 ```
 
 ## Progress
-![Alt text](assets/images/terraindemo.gif)
+![Alt text](assets/images/terraindemo2.gif)

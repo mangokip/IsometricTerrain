@@ -1,39 +1,32 @@
 //
-// Created by bryce-klein on 3/13/25.
+// Created by bryce-klein on 3/14/25.
 //
 
 #ifndef BLOCK_H
 #define BLOCK_H
 
 #include <SFML/Graphics.hpp>
-#include <random>
+
+
 class Block {
- public:
-     Block(const sf::Vector2f& center, int row, const sf::Vector2f& size, float height, int blockType);
+public:
+    Block(const sf::Vector2f &position, int z, sf::Color topColor, sf::Color sideColor, int gx, int gy);
+    void draw(sf::RenderTarget &target) const;
+    void setPosition(const sf::Vector2f &pos);
 
-     void setTopColor(const sf::Color& color);
-     void setLeftColor(const sf::Color& color);
-     void setRightColor(const sf::Color& color);
-     void setPosition(const sf::Vector2f& position);
-     int getRow() const;
-     sf::Vector2f getOriginalPosition() const;
-     void draw(sf::RenderWindow& window) const;
+    sf::Vector2f getPosition() const { return position; }
+    int getZ() const { return z; }
+    int getGridX() const { return gridX; }
+    int getGridY() const { return gridY; }
+    sf::Color getTopColor() const { return top.getFillColor(); }
 
- private:
-     sf::ConvexShape top;
-     sf::ConvexShape left;
-     sf::ConvexShape right;
-     sf::Vector2f originalPosition;
-     sf::Vector2f center;
-     sf::Vector2f size;
-     int gridRow;
-     int blockType;
-     float height;
-     sf::Color generateRandomColor(int blockType);
-     void updateShapes();
+private:
+    sf::ConvexShape top, left, right;
+    sf::Vector2f position;
+    int z; // stack index
+    int gridX, gridY; // grid coords
 
+    void updateShapes();
 };
 
-
-
-#endif //BLOCK_H
+#endif // BLOCK_H

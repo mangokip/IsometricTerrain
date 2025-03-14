@@ -1,12 +1,10 @@
 # Isometric Tile Simulator
 
 ## Overview
-I plan to turn this into a larger-scale isometric terrain generator. This is merely a hobby project using C++ and SFML. My goal for completion will be a randomly generated map that can be
-moved around to show new randomly generated parts of an isometric map.
+This project was a short attempt at creating rendered chunks in C++ using SFML. The terrain is pseudo-isometric, using voxels for the actual grid and perlin noise for the generation. Be warned, this is not super CPU intensive but the rendering isn't completely optimized ( I optimized it enough so that it runs at least at 60 FPS) and can be a memory hog. This serves no purpose other than self practice and showing off some cool graphical rendering at a lower level.
 
 ## Features
-Haven't really done much, but so far you can just view a cool little block map oscillating based off the function for sin.
-
+Randomly generated terrain chunk inspired by isometric graphics and perlin noise. The water is animated :)
 ## Prerequisites
 - A C++ compiler with C++20 support.
 - [SFML 2.5+](https://www.sfml-dev.org/) installed on your system.
@@ -28,5 +26,7 @@ Build:
   ./IsometricTileSim  
 ```
 
-## Progress
+## Demo
 ![Alt text](assets/images/terraindemo2.gif)
+![Alt text](assets/images/terraindemo3.gif)
+![Alt text](assets/images/terraindemo4.gif)

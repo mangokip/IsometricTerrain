@@ -1,40 +1,29 @@
-#include <iostream>
-#include <SFML/Graphics.hpp>
-#include "Tile.h"
-#include "TileMap.h"
-#include "Block.h"
-#include "BlockMap.h"
-#include<cmath>
+//
+// Created by bryce-klein on 3/13/25.
+//
 
+#include <SFML/Graphics.hpp>
+#include "BlockMap.h"
 
 int main() {
-    sf::RenderWindow window(sf::VideoMode::getDesktopMode(), "Tile Simulation");
+    sf::RenderWindow window(sf::VideoMode(1900, 1080), "Isometric Tile Sim", sf::Style::Close);
     window.setFramerateLimit(60);
 
-    const int gridWidth = 10;
-    const int gridHeight = 10;
-    const sf::Vector2f blockSize(100.f, 50.f);
-    const float blockHeight = 50.f;
-    const sf::Vector2f origin(1000.f, 100.f);
-
-    BlockMap block_map(gridWidth, gridHeight, origin, blockSize, blockHeight);
-
-    sf::Clock clock;
+    BlockMap blockMap(100, 100);
 
     while (window.isOpen()) {
-        sf::Event event{};
+        sf::Event event;
         while (window.pollEvent(event)) {
             if (event.type == sf::Event::Closed)
                 window.close();
         }
-        float time = clock.getElapsedTime().asSeconds();
-        block_map.sinWave(time, 10.f, 0.05f, 2.f, 0.2f);
+
+        blockMap.animateWater();
+
         window.clear(sf::Color::Black);
-        block_map.draw(window);
+        blockMap.draw(window);
         window.display();
     }
 
     return 0;
 }
-
-

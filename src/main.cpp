@@ -6,7 +6,7 @@
 #include "BlockMap.h"
 
 int main() {
-    sf::RenderWindow window(sf::VideoMode(1900, 1080), "Isometric Tile Sim", sf::Style::Close);
+    sf::RenderWindow window(sf::VideoMode(1900, 1080), "Isometric Voxel Sim", sf::Style::Close);
     window.setFramerateLimit(60);
 
     BlockMap blockMap(100, 100);

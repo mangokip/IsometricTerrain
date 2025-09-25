@@ -10,13 +10,13 @@ Randomly generated terrain chunk inspired by isometric graphics and perlin noise
 ## Prerequisites
 - A C++ compiler with C++20 support.
 - [SFML 2.5+](https://www.sfml-dev.org/) installed on your system.
-- [CMake](https://cmake.org/) (version 3.30 or above is recommended).
+- [CMake](https://cmake.org/) (version 3.30 or above is required.
 - An IDE such as [CLion](https://www.jetbrains.com/clion/) is optional but recommended.
 ## Building the Project
 
 Clone Repo:
  ```bash
-   git clone https://github.com/mangokip/IsometricTileSim.git
+   git clone git@github.com:mangokip/IsometricTerrain.git
    cd IsometricTileSim
 ```
 Build:

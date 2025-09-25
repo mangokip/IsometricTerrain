@@ -16,7 +16,7 @@ Randomly generated terrain chunk inspired by isometric graphics and perlin noise
 
 Clone Repo:
  ```bash
-   git clone https://github.com/your-username/IsometricTileSim.git
+   git clone https://github.com/mangokip/IsometricTileSim.git
    cd IsometricTileSim
 ```
 Build:
